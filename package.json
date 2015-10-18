@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "babel-core": "^5.5.6",
+    "bower": "^1.6.3",
     "browser-sync": "^2.2.1",
     "del": "^1.1.1",
     "gulp": "^3.9.0",
@@ -39,9 +40,10 @@
     }
   },
   "scripts": {
-    "postinstall": "npm run build && npm run rejoice",
+    "postinstall": "npm run bower && npm run build && npm run rejoice",
     "build": "gulp",
     "rejoice": "echo yay!",
-    "start": "gulp serve:dist"
+    "start": "gulp serve:dist",
+    "bower":  "./node_modules/bower/bin/bower install"
   }
 }
